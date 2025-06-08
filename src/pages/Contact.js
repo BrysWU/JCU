@@ -11,7 +11,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
 import Link from "@mui/material/Link";
 
-const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"; // <-- Replace with your real access key
+const WEB3FORMS_KEY = "18d45aee-e6fa-4c0b-a751-8b5a33210dd8"; //
 
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
