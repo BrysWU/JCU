@@ -11,6 +11,7 @@ import LocalCarWashIcon from "@mui/icons-material/LocalCarWash";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Link from "@mui/material/Link";
+import familyPhoto from "../assets/images/family.jpg";
 
 function About() {
   return (
@@ -46,7 +47,7 @@ function About() {
       <Stack direction="row" spacing={3} alignItems="center" sx={{ mt: 4 }}>
         <Avatar
           alt="Justin Osborne"
-          src="..assets/images/family.jpg"
+          src={familyPhoto}
           sx={{ width: 100, height: 100 }}
         />
         <Box>
