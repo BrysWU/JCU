@@ -68,7 +68,7 @@ function About() {
       </Typography>
       <Stack direction="row" spacing={2} alignItems="center">
         <FacebookIcon color="primary" />
-        <Link href="https://www.facebook.com/JustinsMarineCanvasAndUpholstery" target="_blank" rel="noopener" underline="hover">
+        <Link href="https://www.facebook.com/kingofcanvas" target="_blank" rel="noopener" underline="hover">
           Justin's Marine Canvas and Upholstery on Facebook
         </Link>
       </Stack>

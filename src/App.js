@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -8,20 +8,30 @@ import About from "./pages/About";
 import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-
-const theme = createTheme({
-  palette: {
-    mode: "light",
-    primary: { main: "#1976d2" },
-    secondary: { main: "#ff9800" },
-    background: { default: "#f5f7fa" },
-  },
-  typography: {
-    fontFamily: "Roboto, Arial, sans-serif",
-  },
-});
+import DarkModeToggle from "./components/DarkModeToggle";
 
 function App() {
+  const [mode, setMode] = useState("light");
+
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+          primary: { main: "#1976d2" },
+          secondary: { main: "#ff9800" },
+          background: {
+            default: mode === "dark" ? "#181a1b" : "#f5f7fa",
+            paper: mode === "dark" ? "#232527" : "#fff",
+          },
+        },
+        typography: {
+          fontFamily: "Roboto, Arial, sans-serif",
+        },
+      }),
+    [mode]
+  );
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -34,6 +44,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        <DarkModeToggle mode={mode} setMode={setMode} />
       </Router>
     </ThemeProvider>
   );
