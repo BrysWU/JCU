@@ -5,18 +5,14 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "@mui/material/Link";
 
-const NOTIFICATION_STORAGE_KEY = "site_notification_dismissed";
-
 function SiteNotification() {
-  const [open, setOpen] = useState(() => {
-    // Persist dismissal across reloads
-    const dismissed = localStorage.getItem(NOTIFICATION_STORAGE_KEY);
-    return dismissed !== "true";
-  });
+  // For testing, always show notification on reload by default
+  const [open, setOpen] = useState(true);
 
   const handleClose = () => {
     setOpen(false);
-    localStorage.setItem(NOTIFICATION_STORAGE_KEY, "true");
+    // When ready for production, re-enable localStorage persistence here
+    // localStorage.setItem("site_notification_dismissed", "true");
   };
 
   if (!open) return null;
@@ -24,15 +20,18 @@ function SiteNotification() {
   return (
     <Box
       sx={{
-        bgcolor: "secondary.main",
+        bgcolor: "#5e07b5",
         color: "white",
         px: 2,
         py: 1,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative",
+        position: "sticky",
+        top: 64, // navbar MUI default height is 64px for desktop
+        zIndex: 1101, // Above MUI AppBar (z-index 1100)
         minHeight: 44,
+        width: "100%",
       }}
     >
       <Typography sx={{ fontSize: { xs: 13, md: 16 }, fontWeight: 500, letterSpacing: 0.1 }}>
