@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/JCU/static/js/main.961a3180.js",
+    "main.js": "/JCU/static/js/main.f593b104.js",
     "static/media/family.jpg": "/JCU/static/media/family.3ebb082da111dd465e74.jpg",
     "index.html": "/JCU/index.html",
-    "main.961a3180.js.map": "/JCU/static/js/main.961a3180.js.map"
+    "main.f593b104.js.map": "/JCU/static/js/main.f593b104.js.map"
   },
   "entrypoints": [
-    "static/js/main.961a3180.js"
+    "static/js/main.f593b104.js"
   ]
 }
