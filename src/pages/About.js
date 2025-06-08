@@ -46,7 +46,7 @@ function About() {
       <Stack direction="row" spacing={3} alignItems="center" sx={{ mt: 4 }}>
         <Avatar
           alt="Justin Osborne"
-          src="https://placehold.co/100x100?text=Justin"
+          src="..assets/images/family.jpg"
           sx={{ width: 100, height: 100 }}
         />
         <Box>
