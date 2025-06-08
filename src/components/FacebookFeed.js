@@ -23,7 +23,7 @@ function FacebookFeed() {
         data-href="https://www.facebook.com/kingofcanvas"
         data-tabs="timeline"
         data-width="500"
-        data-height=""
+        data-height="700"
         data-small-header="false"
         data-adapt-container-width="true"
         data-hide-cover="false"

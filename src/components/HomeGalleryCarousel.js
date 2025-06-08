@@ -84,8 +84,8 @@ function HomeGalleryCarousel() {
 
   return (
     <Box sx={{ position: "relative", width: "100%", my: 4 }}>
-      <Grid container spacing={2} alignItems="center" justifyContent="center">
-        <Grid item xs="auto">
+      <Grid container spacing={2} alignItems="stretch" justifyContent="center">
+        <Grid item xs="auto" sx={{ display: "flex", alignItems: "center" }}>
           <IconButton
             aria-label="Previous"
             onClick={handlePrev}
@@ -96,8 +96,18 @@ function HomeGalleryCarousel() {
           </IconButton>
         </Grid>
         {displayed.map((item, idx) => (
-          <Grid item xs={12} sm={4} key={idx}>
-            <Card sx={{ maxWidth: 330, mx: "auto" }}>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            key={idx}
+            sx={{
+              display: "flex",
+              alignItems: "stretch",
+              justifyContent: "center",
+            }}
+          >
+            <Card sx={{ maxWidth: 330, width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
               <CardMedia
                 component="img"
                 height="170"
@@ -105,7 +115,7 @@ function HomeGalleryCarousel() {
                 alt={item.title}
                 sx={{ objectFit: "cover" }}
               />
-              <CardContent>
+              <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="subtitle1">{item.title}</Typography>
                 <Typography variant="body2" color="text.secondary">
                   {item.desc}
@@ -114,7 +124,7 @@ function HomeGalleryCarousel() {
             </Card>
           </Grid>
         ))}
-        <Grid item xs="auto">
+        <Grid item xs="auto" sx={{ display: "flex", alignItems: "center" }}>
           <IconButton
             aria-label="Next"
             onClick={handleNext}
