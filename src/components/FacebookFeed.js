@@ -17,13 +17,21 @@ function FacebookFeed() {
   }, []);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center", margin: "2rem 0" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        margin: "2rem 0",
+        width: "80vw",
+        maxWidth: 800,
+      }}
+    >
       <div
         className="fb-page"
         data-href="https://www.facebook.com/kingofcanvas"
         data-tabs="timeline"
-        data-width="700"
-        data-height="1000"
+        data-width="100%"
+        data-height="700"
         data-small-header="false"
         data-adapt-container-width="true"
         data-hide-cover="false"

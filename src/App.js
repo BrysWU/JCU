@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Navbar from "./components/Navbar";
+import SiteNotification from "./components/SiteNotification";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import OurWork from "./pages/OurWork";
@@ -37,6 +38,7 @@ function App() {
       <CssBaseline />
       <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
+        <SiteNotification />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
