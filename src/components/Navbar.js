@@ -20,7 +20,7 @@ function Navbar() {
     <AppBar position="sticky" color="primary" elevation={2}>
       <Toolbar>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Canvas & Upholstery
+          Justin's Marine Canvas & Upholstery
         </Typography>
         <Box>
           {navItems.map((item) => (

@@ -14,8 +14,8 @@ function Footer() {
       }}
       component="footer"
     >
-      <Typography variant="body2">
-        &copy; {new Date().getFullYear()} Canvas & Upholstery. All rights reserved.
+      <Typography variant="body2" sx={{fontWeight: 300}}>
+        &copy; {new Date().getFullYear()} Justin's Marine Canvas & Upholstery. Serving Volusia County, Florida.
       </Typography>
     </Box>
   );
