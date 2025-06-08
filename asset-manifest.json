@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/JCU/static/js/main.3e5972be.js",
+    "main.js": "/JCU/static/js/main.c748ec32.js",
     "index.html": "/JCU/index.html",
-    "main.3e5972be.js.map": "/JCU/static/js/main.3e5972be.js.map"
+    "main.c748ec32.js.map": "/JCU/static/js/main.c748ec32.js.map"
   },
   "entrypoints": [
-    "static/js/main.3e5972be.js"
+    "static/js/main.c748ec32.js"
   ]
 }
