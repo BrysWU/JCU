@@ -15,7 +15,7 @@ import familyPhoto from "../assets/images/family.jpg";
 
 function About() {
   return (
-    <Container maxWidth="md" sx={{ py: 8 }}>
+    <Container justifyItems="center" maxWidth="md" sx={{ py: 8 }}>
       <Typography variant="h3" color="primary" gutterBottom>
         About Justin & Our Story
       </Typography>
