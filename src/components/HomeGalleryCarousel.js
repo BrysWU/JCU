@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -84,57 +83,67 @@ function HomeGalleryCarousel() {
 
   return (
     <Box sx={{ position: "relative", width: "100%", my: 4 }}>
-      <Grid container spacing={2} alignItems="stretch" justifyContent="center">
-        <Grid item xs="auto" sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton
-            aria-label="Previous"
-            onClick={handlePrev}
-            sx={{ borderRadius: "50%" }}
-            size="large"
-          >
-            <ArrowBackIosNewIcon />
-          </IconButton>
-        </Grid>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          flexWrap: "nowrap",
+          gap: { xs: 1, sm: 2 },
+          width: "100%",
+        }}
+      >
+        <IconButton
+          aria-label="Previous"
+          onClick={handlePrev}
+          sx={{ borderRadius: "50%" }}
+          size="large"
+        >
+          <ArrowBackIosNewIcon />
+        </IconButton>
         {displayed.map((item, idx) => (
-          <Grid
-            item
-            xs={12}
-            sm={4}
+          <Card
             key={idx}
             sx={{
+              width: { xs: 110, sm: 220, md: 320 },
+              height: { xs: 170, sm: 240, md: 320 },
               display: "flex",
-              alignItems: "stretch",
-              justifyContent: "center",
+              flexDirection: "column",
+              mx: 1,
+              flexShrink: 0,
+              boxShadow: 3,
             }}
           >
-            <Card sx={{ maxWidth: 330, width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
-              <CardMedia
-                component="img"
-                height="170"
-                image={item.src}
-                alt={item.title}
-                sx={{ objectFit: "cover" }}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography variant="subtitle1">{item.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {item.desc}
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+            <CardMedia
+              component="img"
+              image={item.src}
+              alt={item.title}
+              sx={{
+                width: "100%",
+                height: { xs: 90, sm: 150, md: 200 },
+                objectFit: "cover",
+              }}
+            />
+            <CardContent sx={{ flexGrow: 1, p: 1, pb: '8px !important' }}>
+              <Typography variant="subtitle1" sx={{ fontSize: { xs: 12, md: 16 } }}>
+                {item.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ fontSize: { xs: 10, md: 14 } }}>
+                {item.desc}
+              </Typography>
+            </CardContent>
+          </Card>
         ))}
-        <Grid item xs="auto" sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton
-            aria-label="Next"
-            onClick={handleNext}
-            sx={{ borderRadius: "50%" }}
-            size="large"
-          >
-            <ArrowForwardIosIcon />
-          </IconButton>
-        </Grid>
-      </Grid>
+        <IconButton
+          aria-label="Next"
+          onClick={handleNext}
+          sx={{ borderRadius: "50%" }}
+          size="large"
+        >
+          <ArrowForwardIosIcon />
+        </IconButton>
+      </Box>
     </Box>
   );
 }
