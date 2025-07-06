@@ -7,6 +7,9 @@ import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
 import HomeGalleryCarousel from "../components/HomeGalleryCarousel";
 import FacebookFeed from "../components/FacebookFeed";
+import Testimonials from "../components/Testimonials";
+import ServicesShowcase from "../components/ServicesShowcase";
+import StatsSection from "../components/StatsSection";
 
 function Home() {
   return (
@@ -35,49 +38,11 @@ function Home() {
 
       <HomeGalleryCarousel />
 
-      <Box sx={{ maxWidth: 1200, mx: "auto", mb: 6 }}>
-        <Typography variant="h4" color="primary" sx={{ mb: 2, textAlign: "center" }}>
-          What We Offer
-        </Typography>
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3} sx={{ p: 3, minHeight: 190, display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <Typography variant="h6" color="primary" gutterBottom>
-                Boat Upholstery & Canvas
-              </Typography>
-              <Typography variant="body2">
-                • Custom boat covers, bimini tops, enclosures<br/>
-                • Marine upholstery restoration & repairs<br/>
-                • Snap-in carpets, sunpads, seats & more
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3} sx={{ p: 3, minHeight: 190, display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <Typography variant="h6" color="primary" gutterBottom>
-                Auto Upholstery & Convertible Tops
-              </Typography>
-              <Typography variant="body2">
-                • Car & truck seat repair/upholstery<br/>
-                • Convertible tops, headliners, door panels<br/>
-                • Classic car restoration & custom projects
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper elevation={3} sx={{ p: 3, minHeight: 190, display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <Typography variant="h6" color="primary" gutterBottom>
-                Custom Sewing & Mobile Service
-              </Typography>
-              <Typography variant="body2">
-                • Home & business awnings, patio covers<br/>
-                • Cushions, pillows, pet beds, repairs<br/>
-                • Fully mobile service – pickup & delivery
-              </Typography>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Box>
+      <ServicesShowcase />
+
+      <StatsSection />
+
+      <Testimonials />
 
       <Box sx={{ maxWidth: 900, mx: "auto", mt: 6 }}>
         <Typography variant="h5" color="primary" sx={{ mb: 2 }}>

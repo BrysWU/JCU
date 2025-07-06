@@ -5,12 +5,18 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import PetsIcon from "@mui/icons-material/Pets";
 import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import LocalCarWashIcon from "@mui/icons-material/LocalCarWash";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Link from "@mui/material/Link";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
+import HomeIcon from "@mui/icons-material/Home";
 import familyPhoto from "../assets/images/family.jpg";
 
 function About() {
@@ -51,6 +57,49 @@ function About() {
           <li>Mobile service with pickup and drop-off for your convenience</li>
         </ul>
       </Typography>
+
+      <Grid container spacing={3} sx={{ mt: 4 }}>
+        <Grid item xs={12} md={4}>
+          <Card elevation={3} sx={{ height: '100%', textAlign: 'center' }}>
+            <CardContent>
+              <WorkIcon sx={{ fontSize: 50, color: 'primary.main', mb: 2 }} />
+              <Typography variant="h6" gutterBottom>
+                Experience
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                20+ years of hands-on experience in marine canvas, auto upholstery, and custom sewing
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Card elevation={3} sx={{ height: '100%', textAlign: 'center' }}>
+            <CardContent>
+              <HomeIcon sx={{ fontSize: 50, color: 'primary.main', mb: 2 }} />
+              <Typography variant="h6" gutterBottom>
+                Local Roots
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                Proud New Smyrna Beach resident for over 20 years, deeply connected to the community
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <Card elevation={3} sx={{ height: '100%', textAlign: 'center' }}>
+            <CardContent>
+              <SchoolIcon sx={{ fontSize: 50, color: 'primary.main', mb: 2 }} />
+              <Typography variant="h6" gutterBottom>
+                Continuous Learning
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                Always staying current with the latest materials, techniques, and industry standards
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
       <Stack direction="row" spacing={3} alignItems="center" sx={{ mt: 4 }}>
         <Avatar
           alt="Justin Osborne"
